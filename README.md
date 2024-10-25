@@ -1,5 +1,109 @@
 ## 프로그래밍언어론 Python Tokenizer 실습
 
+### 예시
+
+**python 코드**
+
+```python
+memo = [[False] * (lenNumbers+1) for _ in range(lenNumbers+1)]
+for i in range(1, lenNumbers+1):
+    memo[i][i] = True
+for i in range(1, lenNumbers):
+    if numbers[i] == numbers[i+1]:
+        memo[i][i+1] = True
+```
+
+**토큰화 결과**
+
+```
+IDENTIFIER              memo
+OPERATOR                =
+LEFT_BRACKET            [
+LEFT_BRACKET            [
+KEYWORD                 False
+RIGHT_BRACKET           ]
+OPERATOR                *
+LEFT_PARENTHESIS        (
+IDENTIFIER              lenNumbers
+OPERATOR                +
+DECIMAL_INT_LITERAL     1
+RIGHT_PARENTHESIS       )
+KEYWORD                 for
+IDENTIFIER              _
+KEYWORD                 in
+IDENTIFIER              range
+LEFT_PARENTHESIS        (
+IDENTIFIER              lenNumbers
+OPERATOR                +
+DECIMAL_INT_LITERAL     1
+RIGHT_PARENTHESIS       )
+RIGHT_BRACKET           ]
+LINEBREAK
+KEYWORD                 for
+IDENTIFIER              i
+KEYWORD                 in
+IDENTIFIER              range
+LEFT_PARENTHESIS        (
+DECIMAL_INT_LITERAL     1
+COMMA                   ,
+IDENTIFIER              lenNumbers
+OPERATOR                +
+DECIMAL_INT_LITERAL     1
+RIGHT_PARENTHESIS       )
+COLON                   :
+LINEBREAK
+INDENT                  depth=1
+IDENTIFIER              memo
+LEFT_BRACKET            [
+IDENTIFIER              i
+RIGHT_BRACKET           ]
+LEFT_BRACKET            [
+IDENTIFIER              i
+RIGHT_BRACKET           ]
+OPERATOR                =
+KEYWORD                 True
+LINEBREAK
+KEYWORD                 for
+IDENTIFIER              i
+KEYWORD                 in
+IDENTIFIER              range
+LEFT_PARENTHESIS        (
+DECIMAL_INT_LITERAL     1
+COMMA                   ,
+IDENTIFIER              lenNumbers
+RIGHT_PARENTHESIS       )
+COLON                   :
+LINEBREAK
+INDENT                  depth=1
+KEYWORD                 if
+IDENTIFIER              numbers
+LEFT_BRACKET            [
+IDENTIFIER              i
+RIGHT_BRACKET           ]
+OPERATOR                ==
+IDENTIFIER              numbers
+LEFT_BRACKET            [
+IDENTIFIER              i
+OPERATOR                +
+DECIMAL_INT_LITERAL     1
+RIGHT_BRACKET           ]
+COLON                   :
+LINEBREAK
+INDENT                  depth=2
+IDENTIFIER              memo
+LEFT_BRACKET            [
+IDENTIFIER              i
+RIGHT_BRACKET           ]
+LEFT_BRACKET            [
+IDENTIFIER              i
+OPERATOR                +
+DECIMAL_INT_LITERAL     1
+RIGHT_BRACKET           ]
+OPERATOR                =
+KEYWORD                 True
+LINEBREAK
+```
+
 ### 실행 방법
 
 새로운 파이썬 파일을 토큰화하고 싶다면, `<python_file_name>.py`를 만든 뒤, 아래와 같이 터미널에 명령을 입력한다.
