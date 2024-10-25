@@ -1,4 +1,4 @@
-## 프로그래밍언어론 Python Tokenizer 실습
+## Python Tokenizer
 
 ### 예시
 
