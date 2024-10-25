@@ -1,0 +1,2 @@
+./all
+cat test3.py | ./output

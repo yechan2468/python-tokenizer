@@ -1,0 +1,5 @@
+echo #######  LEX  ########
+./lex
+echo ####### COMPILE ########
+./compile
+echo ####### DONE #######
