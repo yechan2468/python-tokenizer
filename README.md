@@ -139,6 +139,14 @@ hi.
 **토큰화 결과 2**
 
 ```
+KEYWORD                 import
+IDENTIFIER              sys
+LINEBREAK
+STRING_LITERAL  "importimport~~"
+LINEBREAK
+STRING_LITERAL  """ 
+hi. 
+"""
 LINEBREAK
 OCTAL_INT_LITERAL       0o124
 LINEBREAK
