@@ -104,6 +104,16 @@ KEYWORD                 True
 LINEBREAK
 ```
 
+### Prerequisites
+
+Flex와 gcc가 설치되어 있어야 합니다.
+
+```bash
+apt update
+apt install flex
+apt install build-essential
+```
+
 ### 실행 방법
 
 새로운 파이썬 파일을 토큰화하고 싶다면, `<python_file_name>.py`를 만든 뒤, 아래와 같이 터미널에 명령을 입력한다.
